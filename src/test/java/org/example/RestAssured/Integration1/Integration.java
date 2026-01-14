@@ -47,48 +47,6 @@ public class Integration {
 
     }
 
-//    @Test()
-//    public void getBookingID(){
-//        BookingDates bookingDatesobj = new BookingDates();
-//        bookingDatesobj.setCheckin("2018-01-01");
-//        bookingDatesobj.setCheckout("2019-01-01");
-//
-//        BookingData bookingDataObj = new BookingData();
-//        bookingDataObj.setFirstname("Jim");
-//        bookingDataObj.setLastname("Brown");
-//        bookingDataObj.setTotalprice(111);
-//        bookingDataObj.setDepositpaid(true);
-//        bookingDataObj.setBookingdates(bookingDatesobj);
-//        bookingDataObj.setAdditionalneeds("Breakfast");
-//
-//
-//        //serialization
-//        Gson gson = new Gson();
-//        String jsonBookingPayload = gson.toJson(bookingDataObj);
-//
-//        RequestSpecification rs = RestAssured.given();
-//        rs.baseUri("https://restful-booker.herokuapp.com");
-//        rs.basePath("/booking");
-//        rs.contentType(ContentType.JSON);
-//        rs.cookie(token);
-//        rs.body(jsonBookingPayload).log().all();
-//
-//
-//        Response response = rs.when().post();
-//        String jsonResponseString = response.asString();
-//
-//        ValidatableResponse vs = response.then().log().all();
-//        vs.statusCode(200);
-//
-//        bookingID = response.jsonPath().getInt("bookingid");
-//
-//        //Deserialization
-//        BookingResponse bookingResponse = gson.fromJson(jsonResponseString, BookingResponse.class);
-//        assertThat(bookingResponse.getBookingid()).isNotZero().isNotNull();
-//        assertThat(bookingResponse.getBooking().getFirstname()).isEqualTo("Jim");
-// }
-
-
 
     @Test(priority = 2)
     public void validateBookingIdsInRange() {

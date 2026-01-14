@@ -19,6 +19,7 @@ public class FarhanTestNGPriority {
       softAssert.assertTrue(false);
       softAssert.assertEquals(1, 2);
       System.out.println("Test02");
+      softAssert.assertAll();
 
     }
 

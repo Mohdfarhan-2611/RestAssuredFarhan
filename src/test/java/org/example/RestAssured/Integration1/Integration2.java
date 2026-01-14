@@ -17,7 +17,7 @@ public class Integration2 {
         rs.header("content-type", "application-json");
         rs.body("");
         rs.auth().basic("username", "password");
-        rs.auth().oauth("", "", "", "");
+        rs.auth().oauth("consumerKey", "consumerSecret", "tokenAccess", "tokenSecret");
         rs.auth().oauth2("");
 
 
